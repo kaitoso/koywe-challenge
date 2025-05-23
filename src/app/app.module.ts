@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from 'src/shared/infrastructure/prisma/prisma.module';
 import { AuthControllerModule } from './modules/auth.controller.module';
+import { QuoteControllerModule } from './modules/quote.contoller.module';
 
 
 @Module({
@@ -10,6 +11,7 @@ import { AuthControllerModule } from './modules/auth.controller.module';
     isGlobal: true,
   }),
   AuthControllerModule,
+  QuoteControllerModule,
   PrismaModule
 ],
 })
